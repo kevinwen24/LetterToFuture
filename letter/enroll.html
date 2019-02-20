@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <form action="" class="form-control">
+      <input type="email" placeholder="请输入邮箱" id="email">
+      <input type="button" class="btn-primary" value="注册">
+    </form>
+  </div>
+</body>
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  $(function(){
+    $.post("enroll",{"email": $("#email").val()},function(res){
+      alert(res)
+    })
+    
+  })
+</script>
+</html>
